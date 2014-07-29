@@ -1,7 +1,9 @@
-language: python
-python:
-  - "2.6"
-  - "2.7"
+language: cpp
+
+env:
+  matrix:
+    - PY_VER=2.7
+    - PY_VER=2.6
 
 # command to run tests
-script: python test.py
+script: python$PY_VER test.py
