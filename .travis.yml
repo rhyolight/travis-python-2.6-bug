@@ -5,5 +5,8 @@ env:
     - PY_VER=2.7
     - PY_VER=2.6
 
+before_install:
+  - sudo apt-get install python$PY_VER
+
 # command to run tests
 script: python$PY_VER test.py
