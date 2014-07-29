@@ -12,6 +12,7 @@ before_install:
   - sudo ls -laFh /usr/lib/libpython$PY_VER.so
   - virtualenv --python=`which python$PY_VER` .
   - source bin/activate
+  - export PYTHONPATH=$PYTHONPATH:/home/travis/.local/lib/python$PY_VER/site-packages
 
 # command to run tests
 script: python$PY_VER test.py
